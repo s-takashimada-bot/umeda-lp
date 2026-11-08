@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax slice" role="img" aria-label="梅田の街並み">
+  <!-- 奥のビル -->
+  <g fill="#ffffff" fill-opacity=".07">
+    <rect x="30" y="100" width="50" height="100"/>
+    <rect x="250" y="85" width="40" height="115"/>
+    <rect x="470" y="95" width="40" height="105"/>
+    <rect x="600" y="60" width="50" height="140"/>
+    <rect x="820" y="90" width="40" height="110"/>
+    <rect x="1010" y="82" width="40" height="118"/>
+    <rect x="1240" y="60" width="40" height="140"/>
+    <rect x="1370" y="90" width="40" height="110"/>
+  </g>
+  <!-- 中景のビル -->
+  <g fill="#ffffff" fill-opacity=".13">
+    <rect x="120" y="80" width="40" height="120"/>
+    <rect x="200" y="60" width="30" height="140"/>
+    <rect x="420" y="70" width="50" height="130"/>
+    <rect x="520" y="50" width="40" height="150"/>
+    <rect x="660" y="80" width="60" height="120"/>
+    <rect x="760" y="40" width="40" height="160"/>
+    <rect x="928" y="146" width="104" height="54"/>
+    <rect x="1080" y="65" width="50" height="135"/>
+    <rect x="1180" y="50" width="40" height="150"/>
+    <rect x="1300" y="75" width="60" height="125"/>
+  </g>
+  <!-- 中景の窓 -->
+  <g fill="#ffd38a" fill-opacity=".35">
+    <rect x="527" y="62" width="4" height="4"/><rect x="537" y="62" width="4" height="4"/><rect x="547" y="74" width="4" height="4"/>
+    <rect x="767" y="54" width="4" height="4"/><rect x="777" y="66" width="4" height="4"/><rect x="787" y="54" width="4" height="4"/>
+    <rect x="1187" y="64" width="4" height="4"/><rect x="1197" y="76" width="4" height="4"/><rect x="1207" y="64" width="4" height="4"/>
+    <rect x="1088" y="80" width="4" height="4"/><rect x="1110" y="92" width="4" height="4"/>
+  </g>
+  <!-- 観覧車（梅田の赤い観覧車をイメージ） -->
+  <g fill="none" stroke="#ff5a5f" stroke-linecap="round">
+    <circle cx="980" cy="96" r="50" stroke-width="3.5"/>
+    <circle cx="980" cy="96" r="40" stroke-width="1.2" stroke-opacity=".6"/>
+    <g stroke-width="1.4" stroke-opacity=".75">
+      <line x1="980" y1="46" x2="980" y2="146"/>
+      <line x1="930" y1="96" x2="1030" y2="96"/>
+      <line x1="944.6" y1="60.6" x2="1015.4" y2="131.4"/>
+      <line x1="944.6" y1="131.4" x2="1015.4" y2="60.6"/>
+    </g>
+    <path d="M980 96 L958 146 M980 96 L1002 146" stroke-width="3"/>
+  </g>
+  <circle cx="980" cy="96" r="5" fill="#ff5a5f"/>
+  <g fill="#ff5a5f">
+    <circle cx="980" cy="46" r="3.6"/><circle cx="1015.4" cy="60.6" r="3.6"/><circle cx="1030" cy="96" r="3.6"/><circle cx="1015.4" cy="131.4" r="3.6"/>
+    <circle cx="944.6" cy="131.4" r="3.6"/><circle cx="930" cy="96" r="3.6"/><circle cx="944.6" cy="60.6" r="3.6"/>
+  </g>
+  <!-- 手前のビル（次のセクションの背景色でつなぐ） -->
+  <path fill="#0a1630" d="
+    M0 200 V160 H60 V138 H100 V152 H170 V120 H220 V145 H280 V170 H390 V130 H440 V155 H480 V136
+    H570 V108 H620 V142 H690 V160 H730 V125 H810 V148 H860 V112
+    H920 V166 H1040 V130 H1100 V150 H1140 V104 H1220 V140 H1270 V156 H1340 V122 H1390 V148 H1440 V200 Z"/>
+  <!-- 梅田スカイビル（2本のタワーと空中庭園をイメージ） -->
+  <g fill="#0a1630">
+    <rect x="298" y="56" width="30" height="144"/>
+    <rect x="342" y="56" width="30" height="144"/>
+    <rect x="328" y="96" width="14" height="5"/>
+    <rect x="328" y="128" width="14" height="5"/>
+    <path fill-rule="evenodd" d="M294 34 H376 V58 H294 Z M327 46 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0 Z"/>
+  </g>
+</svg>
