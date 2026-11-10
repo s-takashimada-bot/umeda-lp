@@ -400,7 +400,10 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .kv-table tr:last-child th, .kv-table tr:last-child td { border-bottom: 0; }
 @media (max-width: 600px) { .kv-table th, .kv-table td { display: block; width: auto; } .kv-table th { border-bottom: 0; padding-bottom: 6px; } .kv-table td { padding-top: 6px; } }
 .form-embed { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; }
-.form-embed iframe { width: 100%; height: 1100px; border: 0; }
+/* Googleフォームは高さを中身に合わせられないので、フォーム全体が入る高さにしている（11/11に測った高さ：PC幅で約2,270px・スマホ幅で約2,480〜2,540px。入力エラーの表示の分として約250pxを足した）。
+   フォームの項目を増減したら見直す。送信後は main.js が枠を縮める */
+.form-embed iframe { width: 100%; height: 2500px; border: 0; scroll-margin-top: 96px; }
+@media (max-width: 599px) { .form-embed iframe { height: 2800px; } }
 .ph-form { min-height: 260px; }
 
 /* 特商法・プライバシー */

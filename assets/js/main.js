@@ -79,4 +79,19 @@
     if (hero) new IntersectionObserver(function (es) { heroVisible = es[0].isIntersecting; set(); }, { threshold: 0.15 }).observe(hero);
     if (finalCta) new IntersectionObserver(function (es) { finalVisible = es[0].isIntersecting; set(); }, { threshold: 0.1 }).observe(finalCta);
   }
+
+  // ---- 法人の問い合わせフォーム（Googleフォームの埋め込み）：送信すると枠の中身が短い「送信しました」の画面に変わる。
+  //      送信ボタンは枠のいちばん下にあるので、そのままだと白い余白しか見えない。枠の先頭まで戻して、お礼の文を見せる ----
+  var formFrame = document.querySelector('.form-embed iframe');
+  if (formFrame) {
+    var formLoads = 0;
+    formFrame.addEventListener('load', function () {
+      formLoads++;
+      if (formLoads > 1) { // 2回目の読み込み＝送信後
+        formFrame.style.height = '420px'; // お礼の文だけになるので、余白が残らないよう枠を縮める
+        formFrame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        track('corp_form_submit', {});
+      }
+    });
+  }
 })();
