@@ -1,8 +1,8 @@
 // MIRAI CAMP® 大阪梅田校 LP：計算ツール・開校日の表示切り替え・動画・計測・スマホの固定ボタン
 (function () {
   var SITE = window.__SITE || {};
-  // 比べる用：?hero=band で、最初の画面の動画を帯で出す
-  try { if (/[?&]hero=band/.test(location.search)) document.documentElement.setAttribute('data-hero', 'band'); } catch (e) {}
+  // 比べる用：?hero=side で、最初の画面の動画を前の形（右上に小さく）で出す。標準は帯
+  try { if (/[?&]hero=side/.test(location.search)) document.documentElement.setAttribute('data-hero', 'side'); } catch (e) {}
   // 比べる用：?sky=photo で、街並みの絵を梅田の写真に
   try { if (/[?&]sky=photo/.test(location.search)) document.documentElement.setAttribute('data-sky', 'photo'); } catch (e) {}
 
