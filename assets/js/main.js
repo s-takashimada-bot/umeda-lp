@@ -3,6 +3,8 @@
   var SITE = window.__SITE || {};
   // 比べる用：?hero=band で、最初の画面の動画を帯で出す
   try { if (/[?&]hero=band/.test(location.search)) document.documentElement.setAttribute('data-hero', 'band'); } catch (e) {}
+  // 比べる用：?sky=photo で、街並みの絵を梅田の写真に
+  try { if (/[?&]sky=photo/.test(location.search)) document.documentElement.setAttribute('data-sky', 'photo'); } catch (e) {}
 
   // ---- 計測（GA4・Metaピクセルが読み込まれているときだけ送る） ----
   function track(name, params) {

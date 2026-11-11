@@ -146,6 +146,10 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .hero-visual .talk .bubble::before { border-right-color: #fff; }
 
 .skyline { position: absolute; left: 0; right: 0; bottom: -1px; pointer-events: none; }
+/* 比べる用：?sky=photo で、街並みの絵を梅田の写真（ぱくたそ）に替える（11/12 本人「リアルな梅田の写真がいい」） */
+[data-sky="photo"] .hero .skyline:not(.skyline-bottom) { height: 170px; background: linear-gradient(to bottom, var(--navy-deep) 0%, rgba(7, 21, 56, .55) 35%, rgba(7, 21, 56, .2) 100%), url("../img/umeda-photo.jpg") center 60% / cover no-repeat; }
+[data-sky="photo"] .hero .skyline:not(.skyline-bottom) img { display: none; }
+@media (min-width: 900px) { [data-sky="photo"] .hero .skyline:not(.skyline-bottom) { height: 230px; } }
 .skyline img { width: 100%; min-width: 900px; height: 140px; object-fit: cover; object-position: center bottom; margin: 0 auto; }
 @media (min-width: 900px) {
   .hero { padding: 64px 0 190px; }
