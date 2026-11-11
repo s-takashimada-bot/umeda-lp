@@ -120,9 +120,10 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 /* 最初の画面の動画（11/12 本人：アイキャッチに動画）。
    11/12 本人「大きく動画表示しているのが非常にいい」→ 画面の横幅いっぱいの帯で出すのを標準にした。
    動画と同じ16:9の枠にして、上下を切らない（前は高さを画面に合わせて縮めていたので、上が切れて見えた） */
+/* 11/12 本人「PCの100%で全体が見えない。下の字幕が見えない」→ 動画の高さを画面に収まる大きさまでにして、左右は紺で埋める */
 .hero:has(.hero-video) { padding-top: 0; }
-.hero-video { margin: 0 calc(50% - 50vw) 8px; width: 100vw; aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy-deep); }
-.hero-video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.hero-video { margin: 0 calc(50% - 50vw) 8px; width: 100vw; overflow: hidden; background: #050d24; }
+.hero-video video { display: block; margin: 0 auto; width: min(100%, calc((100svh - 230px) * 16 / 9)); aspect-ratio: 16 / 9; height: auto; object-fit: cover; }
 @media (min-width: 900px) {
   .hero-grid.has-video { grid-template-areas: "video video" "text visual"; }
   .hero-grid.has-video .hero-text { grid-area: text; }
@@ -132,6 +133,7 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 /* 比べる用：URLに ?hero=side をつけると、前の形（右上に小さく）で見られる */
 [data-hero="side"] .hero:has(.hero-video) { padding-top: 64px; }
 [data-hero="side"] .hero-video { margin: 0; width: auto; border-radius: 16px; box-shadow: 0 18px 40px rgba(0, 0, 0, .35); }
+[data-hero="side"] .hero-video video { width: 100%; }
 @media (min-width: 900px) {
   [data-hero="side"] .hero-grid.has-video { grid-template-areas: "text video" "text visual"; align-items: start; }
   [data-hero="side"] .hero-grid.has-video .hero-text { align-self: center; }
@@ -150,10 +152,12 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .hero-visual .talk .bubble::before { border-right-color: #fff; }
 
 .skyline { position: absolute; left: 0; right: 0; bottom: -1px; pointer-events: none; }
-/* 比べる用：?sky=photo で、街並みの絵を梅田の写真（ぱくたそ）に替える（11/12 本人「リアルな梅田の写真がいい」） */
-[data-sky="photo"] .hero .skyline:not(.skyline-bottom) { height: 170px; background: linear-gradient(to bottom, var(--navy-deep) 0%, rgba(7, 21, 56, .55) 35%, rgba(7, 21, 56, .2) 100%), url("../img/umeda-photo.jpg") center 60% / cover no-repeat; }
-[data-sky="photo"] .hero .skyline:not(.skyline-bottom) img { display: none; }
-@media (min-width: 900px) { [data-sky="photo"] .hero .skyline:not(.skyline-bottom) { height: 230px; } }
+/* 11/12 本人「街並みの絵は梅田の写真に変えて」→ 最初の画面の下の街並みを、梅田の写真（ぱくたそ・無料・加工OK）にした。前の絵は ?sky=draw で見られる */
+.hero .skyline:not(.skyline-bottom) { height: 170px; background: linear-gradient(to bottom, var(--navy-deep) 0%, rgba(7, 21, 56, .55) 35%, rgba(7, 21, 56, .2) 100%), url("../img/umeda-photo.jpg") center 60% / cover no-repeat; }
+.hero .skyline:not(.skyline-bottom) img { display: none; }
+@media (min-width: 900px) { .hero .skyline:not(.skyline-bottom) { height: 230px; } }
+[data-sky="draw"] .hero .skyline:not(.skyline-bottom) { height: auto; background: none; }
+[data-sky="draw"] .hero .skyline:not(.skyline-bottom) img { display: block; }
 .skyline img { width: 100%; min-width: 900px; height: 140px; object-fit: cover; object-position: center bottom; margin: 0 auto; }
 @media (min-width: 900px) {
   .hero { padding: 64px 0 190px; }

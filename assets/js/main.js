@@ -3,8 +3,8 @@
   var SITE = window.__SITE || {};
   // 比べる用：?hero=side で、最初の画面の動画を前の形（右上に小さく）で出す。標準は帯
   try { if (/[?&]hero=side/.test(location.search)) document.documentElement.setAttribute('data-hero', 'side'); } catch (e) {}
-  // 比べる用：?sky=photo で、街並みの絵を梅田の写真に
-  try { if (/[?&]sky=photo/.test(location.search)) document.documentElement.setAttribute('data-sky', 'photo'); } catch (e) {}
+  // 比べる用：?sky=draw で、街並みを前の絵に戻して見る（標準は梅田の写真）
+  try { if (/[?&]sky=draw/.test(location.search)) document.documentElement.setAttribute('data-sky', 'draw'); } catch (e) {}
 
   // ---- 計測（GA4・Metaピクセルが読み込まれているときだけ送る） ----
   function track(name, params) {
