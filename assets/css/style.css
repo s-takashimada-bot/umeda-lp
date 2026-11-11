@@ -198,6 +198,10 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 @media (min-width: 768px) { .screen-grid { grid-template-columns: repeat(3, 1fr); } }
 .screen { margin: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px; }
 .screen img { border-radius: 8px; filter: none; }
+/* 縦長・横長の画像をそろえて見せる（上の部分を見せ、押すと全体が開く） */
+.screen-thumb { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 8px; border: 1px solid var(--border); background: #faf6f3; }
+.screen-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.screen-zoom { position: absolute; right: 8px; bottom: 8px; background: rgba(7,21,56,.78); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
 .screen figcaption { font-size: 13px; text-align: center; margin-top: 8px; color: var(--muted); }
 .after-case { margin-top: 28px; text-align: center; font-weight: 700; color: var(--navy); }
 
