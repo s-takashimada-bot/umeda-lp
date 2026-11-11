@@ -390,7 +390,12 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .cc-label { font-weight: 900; color: var(--navy-deep); font-size: 17px; }
 .cc-catch { font-family: var(--font-round); color: var(--muted); }
 .cc-go { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; color: var(--orange-deep); font-size: 14px; margin-top: 4px; }
-.cc-corp { background: var(--navy-soft); }
+/* 法人：押せそうに見えるよう、濃い紺で目立たせる（11/11 本人） */
+.cc-corp { background: var(--navy); border-color: var(--navy); }
+.cc-corp:hover { border-color: var(--orange); }
+.cc-corp .cc-label { color: #fff; }
+.cc-corp .cc-catch { color: rgba(255, 255, 255, .85); }
+.cc-corp .cc-go { color: var(--orange); }
 .top-line { margin-top: 28px; }
 
 /* 法人 */
