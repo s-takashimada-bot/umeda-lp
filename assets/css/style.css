@@ -468,3 +468,6 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 
 /* 確認用：公式LINEのURLがまだないときの「準備中」ボタン */
 .btn.is-disabled { opacity: .6; cursor: default; pointer-events: none; box-shadow: none; filter: grayscale(.35); }
+
+/* ボタンの中の小さな補足（チェックリストのボタン） */
+.btn .btn-sub { display: block; font-size: .72em; font-weight: 700; opacity: .9; letter-spacing: .04em; margin-top: 1px; }
