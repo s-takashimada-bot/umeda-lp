@@ -41,10 +41,11 @@
       var h = Math.max(0, Number(hoursEl.value) || 0);
       var r = Math.max(0, Number(rateEl.value) || 0);
       var monthly = h * r;
-      var half = monthly * 0.85; // 校舎長の実例：約85%減（common.mjs の caseTotal.rate と合わせる）
-      out('monthly').textContent = yen(monthly);
-      out('half').textContent = yen(half);
-      out('months').textContent = half > 0 ? (Math.ceil((price / half) * 10) / 10).toLocaleString('ja-JP') : '-';
+      // 11/12 本人：「何か月で元が取れる」はやめて、年間でいくら分の時間を使っているかを見せる
+      var yearly = monthly * 12;
+      var saved = yearly * 0.85; // 校舎長の実例：約85%減（common.mjs の caseTotal.rate と合わせる）
+      out('yearly').textContent = yen(yearly);
+      out('saved').textContent = yen(saved);
     }
     [hoursEl, rateEl].forEach(function (el) {
       el.addEventListener('input', function () {
