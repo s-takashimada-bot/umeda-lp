@@ -153,9 +153,13 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 
 .skyline { position: absolute; left: 0; right: 0; bottom: -1px; pointer-events: none; }
 /* 11/12 本人「街並みの絵は梅田の写真に変えて」→ 最初の画面の下の街並みを、梅田の写真（ぱくたそ・無料・加工OK）にした。前の絵は ?sky=draw で見られる */
-.hero .skyline:not(.skyline-bottom) { height: 170px; background: linear-gradient(to bottom, var(--navy-deep) 0%, rgba(7, 21, 56, .55) 35%, rgba(7, 21, 56, .2) 100%), url("../img/umeda-photo.jpg") center 60% / cover no-repeat; }
+/* 11/12 本人「どよーんとして見える。もっと明るく梅田らしく」→ 写真を明るく・青空を多めに切り直し、上の紺のかぶせを薄く短くした */
+.hero .skyline:not(.skyline-bottom) { height: 190px; background: linear-gradient(to bottom, var(--navy-deep) 0%, rgba(7, 21, 56, .25) 22%, rgba(7, 21, 56, 0) 45%), url("../img/umeda-photo.jpg") center 55% / cover no-repeat; }
 .hero .skyline:not(.skyline-bottom) img { display: none; }
-@media (min-width: 900px) { .hero .skyline:not(.skyline-bottom) { height: 230px; } }
+@media (min-width: 900px) { .hero .skyline:not(.skyline-bottom) { height: 260px; } }
+.hero:has(> .skyline:not(.skyline-bottom)) { padding-bottom: 210px; }
+@media (min-width: 900px) { .hero:has(> .skyline:not(.skyline-bottom)) { padding-bottom: 290px; } }
+[data-sky="draw"] .hero:has(> .skyline:not(.skyline-bottom)) { padding-bottom: 190px; }
 [data-sky="draw"] .hero .skyline:not(.skyline-bottom) { height: auto; background: none; }
 [data-sky="draw"] .hero .skyline:not(.skyline-bottom) img { display: block; }
 .skyline img { width: 100%; min-width: 900px; height: 140px; object-fit: cover; object-position: center bottom; margin: 0 auto; }
