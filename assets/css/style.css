@@ -154,8 +154,8 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .skyline { position: absolute; left: 0; right: 0; bottom: -1px; pointer-events: none; }
 /* 11/12 本人「街並みの絵は梅田の写真に変えて」→ 最初の画面の下の街並みを、梅田の写真（ぱくたそ・無料・加工OK）にした。前の絵は ?sky=draw で見られる */
 /* 11/12 本人「どよーんとして見える。もっと明るく梅田らしく」→ 写真を明るく・青空を多めに切り直し、上の紺のかぶせを薄く短くした */
-.hero .skyline:not(.skyline-bottom) { height: 190px; background: linear-gradient(to bottom, var(--navy-deep) 0%, rgba(7, 21, 56, .2) 18%, rgba(7, 21, 56, 0) 35%), url("../img/umeda-photo.jpg") center 60% / cover no-repeat; }
-/* 11/12 本人「暗いので変えて」「殺風景。にぎわいのある梅田に」→ 晴れの日のうめきた公園（グラングリーン大阪・ぱくたそ fjk_grandgreenIMG_7614）。芝生と人が写る位置で切った */
+.hero .skyline:not(.skyline-bottom) { height: 190px; background: linear-gradient(to bottom, var(--navy-deep) 0%, rgba(7, 21, 56, .2) 18%, rgba(7, 21, 56, 0) 35%), url("../img/umeda-photo.jpg") center 55% / cover no-repeat; }
+/* 11/12 本人「暗いので変えて」「殺風景。にぎわいのある梅田に」→ 晴れの日のうめきた公園（グラングリーン大阪・ぱくたそ fjk_grandgreenIMG_7614）。「ビジネス寄りなのでオフィスビル群の明るい感じ」→ ガラスのオフィスビル群が並ぶ位置で切った */
 .hero .skyline:not(.skyline-bottom) img { display: none; }
 @media (min-width: 900px) { .hero .skyline:not(.skyline-bottom) { height: 260px; } }
 .hero:has(> .skyline:not(.skyline-bottom)) { padding-bottom: 210px; }
