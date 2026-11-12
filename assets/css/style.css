@@ -636,4 +636,6 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .gift-card { text-align: center; background: linear-gradient(160deg, #fff8ef, #fff); border: 2px solid var(--orange); border-radius: var(--radius); padding: 28px 20px; }
 .gift-card h2 { font-size: clamp(20px, 5vw, 26px); color: var(--navy-deep); margin: 4px 0 10px; }
 .gift-card .btn { margin-top: 16px; }
+.gift-buttons { display: grid; gap: 10px; max-width: 460px; margin: 6px auto 0; }
+.gift-buttons .btn { margin-top: 0; width: 100%; }
 @media (min-width: 768px) { .steps4 { grid-template-columns: repeat(4, 1fr); } }
