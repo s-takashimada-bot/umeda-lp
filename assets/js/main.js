@@ -124,7 +124,7 @@
   // ---- スマホの固定ボタン：最初の画面と最後のCTAが見えている間は隠す ----
   var sticky = document.querySelector('[data-sticky]');
   var hero = document.querySelector('[data-hq-hero]') || document.querySelector('.hero'); // 本部の形では、動画だけの画面のあいだも隠す
-  var finalCta = document.querySelector('.final-cta, #contact');
+  var finalCta = document.querySelector('.final-cta, .hq-final, #contact');
   if (sticky && 'IntersectionObserver' in window) {
     var heroVisible = true, finalVisible = false;
     var set = function () { sticky.classList.toggle('show', !heroVisible && !finalVisible); };

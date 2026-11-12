@@ -590,8 +590,26 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .team-card p:last-child { font-size: 14px; text-align: left; line-height: 1.75; }
 .team-local { background: var(--navy-soft); }
 
-.cond-table th { width: 26%; }
-.cond-table small { color: var(--muted); font-size: 12px; }
+/* 料金・受講条件：本部LPと同じ「項目｜受講条件」の2列・中央ぞろえ。受講条件の列をオレンジの枠で囲む */
+.cond-wrap { max-width: 900px; margin: 0 auto; background: #fff; box-shadow: var(--shadow); }
+.cond-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.cond-table th, .cond-table td { padding: 18px 14px; text-align: center; vertical-align: middle; border-bottom: 1px solid var(--border); font-size: 15px; line-height: 1.6; }
+.cond-table tr > :first-child { width: 34%; } /* 表の幅は1行目で決まるので、見出しの行にも幅を指定する */
+.cond-table tbody th { color: var(--navy-deep); font-weight: 700; font-size: 14px; border-left: 1px solid var(--border); }
+.cond-table thead th { color: var(--navy-deep); font-size: 13px; font-weight: 700; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.cond-table thead th.ours { color: var(--orange-deep); font-size: 18px; font-weight: 900; border-top: 2px solid var(--orange); }
+.cond-table .ours { border-left: 2px solid var(--orange); border-right: 2px solid var(--orange); color: var(--navy-deep); }
+.cond-table tbody tr:last-child td { border-bottom: 2px solid var(--orange); }
+.cond-table small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.cond-price { font-size: 22px; font-weight: 900; color: var(--navy-deep); }
+.cond-note { max-width: 900px; margin: 10px auto 0; }
+@media (max-width: 600px) {
+  .cond-table th, .cond-table td { padding: 14px 8px; font-size: 14px; }
+  .cond-table tr > :first-child { width: 30%; }
+  .cond-table tbody th { font-size: 13px; }
+  .cond-table thead th.ours { font-size: 15px; }
+  .cond-price { font-size: 20px; white-space: nowrap; }
+}
 .hq-cond .calc { margin-top: 28px; }
 .hq-cond .pm-cta { margin-top: 18px; }
 
@@ -605,6 +623,15 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 @media (min-width: 768px) { .brief-list { grid-template-columns: 1fr 1fr; } }
 .brief-list li { display: flex; gap: 12px; align-items: center; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; font-weight: 700; color: var(--navy-deep); }
 .brief-list span { font-weight: 900; color: var(--orange-deep); }
+
+/* 最後の呼びかけ：本部LPと同じ、うすい青の帯に大きな見出し・3つのタグ・LINEボタン */
+.hq-final { background: #e8f1f9; }
+.hq-final .sec-head h2 { font-size: clamp(28px, 7vw, 44px); line-height: 1.45; }
+.hq-final .body { color: var(--navy-deep); }
+.hq-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 22px 0 18px; }
+.hq-pills li { padding: 6px 14px; border-radius: 999px; border: 1px solid #9fb3cf; background: #dfe8f3; color: var(--navy-deep); font-weight: 700; font-size: 14px; }
+.hq-final .cta-note { color: var(--muted); margin-top: 12px; }
+.hq-final .text-link { display: inline-block; margin-top: 10px; }
 
 .gift-card { text-align: center; background: linear-gradient(160deg, #fff8ef, #fff); border: 2px solid var(--orange); border-radius: var(--radius); padding: 28px 20px; }
 .gift-card h2 { font-size: clamp(20px, 5vw, 26px); color: var(--navy-deep); margin: 4px 0 10px; }
