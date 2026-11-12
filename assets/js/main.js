@@ -60,6 +60,53 @@
     update();
   });
 
+  // ---- 本部LPの形の最初の画面：はじめは動画だけ → スクロールで動画が背景に（11/12 本人） ----
+  var hqHero = document.querySelector('[data-hq-hero]');
+  if (hqHero) {
+    var hv = hqHero.querySelector('video');
+    var shade = hqHero.querySelector('[data-hq-shade]');
+    var hint = hqHero.querySelector('[data-hq-hint]');
+    var stage = hqHero.querySelector('.hq-stage');
+    var header = document.querySelector('.site-header');
+    var tallMQ = window.matchMedia('(max-width: 767px) and (orientation: portrait)');
+    var cover = 1;
+    var pickVideo = function () {
+      var tall = tallMQ.matches;
+      var src = tall ? hv.getAttribute('data-tall') : hv.getAttribute('data-wide');
+      if (hv.getAttribute('src') !== src) {
+        if (tall && hv.getAttribute('data-poster-tall')) hv.setAttribute('poster', hv.getAttribute('data-poster-tall'));
+        hv.setAttribute('src', src);
+        var p = hv.play(); if (p && p.catch) p.catch(function () {});
+      }
+    };
+    // 動画を枠にぴったり収めた大きさ → 枠いっぱいに広げるのに必要な倍率
+    var calcCover = function () {
+      var w = stage.clientWidth, h = stage.clientHeight, vw = hv.videoWidth || 16, vh = hv.videoHeight || 9;
+      var s = Math.min(w / vw, h / vh);
+      cover = Math.max(w / (vw * s), h / (vh * s));
+    };
+    var setTop = function () {
+      // ヘッダーは上に貼りつくので、貼りついたときの下端（top＋高さ）に動画の枠を合わせる
+      var top = header ? Math.round((parseFloat(getComputedStyle(header).top) || 0) + header.offsetHeight) : 0;
+      hqHero.style.setProperty('--stage-top', top + 'px');
+      calcCover();
+    };
+    var onScroll = function () {
+      var p = Math.min(1, Math.max(0, window.scrollY / (window.innerHeight * 0.28))); // 見出しが重なる前に暗くして、動画の字幕を見えにくくする
+      shade.style.opacity = (0.9 * p).toFixed(3);
+      hint.style.opacity = Math.max(0, 1 - p * 4).toFixed(2);
+      hv.style.transform = 'scale(' + (1 + (cover - 1) * p).toFixed(4) + ')';
+      hv.style.filter = p > 0 ? 'blur(' + (7 * p).toFixed(1) + 'px)' : ''; // 背景になったら、ぼかして字幕を読めなくする
+    };
+    pickVideo();
+    if (tallMQ.addEventListener) tallMQ.addEventListener('change', function () { pickVideo(); });
+    hv.addEventListener('loadedmetadata', function () { calcCover(); onScroll(); });
+    setTop();
+    window.addEventListener('resize', function () { setTop(); onScroll(); });
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   // ---- 動画は押してから読み込む（ページを軽くするため） ----
   document.querySelectorAll('[data-yt]').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -76,7 +123,7 @@
 
   // ---- スマホの固定ボタン：最初の画面と最後のCTAが見えている間は隠す ----
   var sticky = document.querySelector('[data-sticky]');
-  var hero = document.querySelector('.hero');
+  var hero = document.querySelector('[data-hq-hero]') || document.querySelector('.hero'); // 本部の形では、動画だけの画面のあいだも隠す
   var finalCta = document.querySelector('.final-cta, #contact');
   if (sticky && 'IntersectionObserver' in window) {
     var heroVisible = true, finalVisible = false;
