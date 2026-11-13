@@ -651,3 +651,15 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .sched-note { display: flex; gap: 8px; align-items: flex-start; margin-top: 12px; background: #fff4e8; border-radius: var(--radius-sm); padding: 10px 12px; font-weight: 700; font-size: 14.5px; color: var(--navy-deep); }
 .sched-note .ico { color: var(--orange); margin-top: .25em; flex: none; }
 .map-link { display: inline-flex; margin-top: 10px; }
+
+/* 11/14 校舎長のこと：独学の困りごとと、受講した体験 */
+.self-study { margin-top: 18px; background: var(--cream); border-radius: var(--radius-sm); padding: 16px 18px; }
+.self-study .ss-title { font-weight: 900; color: var(--navy-deep); margin-bottom: 8px; }
+.self-study li { position: relative; padding: 5px 0 5px 22px; font-size: 15px; line-height: 1.7; }
+.self-study li::before { content: ''; position: absolute; left: 4px; top: .95em; width: 8px; height: 8px; border-radius: 50%; background: var(--navy-mid, #3a5a8c); }
+.took { margin-top: 14px; border: 2px solid var(--orange); border-radius: var(--radius-sm); padding: 16px 18px; background: #fff; }
+.took-title { display: flex; gap: 8px; align-items: center; font-weight: 900; color: var(--navy-deep); }
+.took-title .ico { color: var(--orange); flex: none; }
+.took-text { margin-top: 8px; font-size: 15px; line-height: 1.8; }
+.took-note { margin-top: 6px; font-size: 12.5px; color: var(--muted, #667); }
+.sec-story .took + .talks { margin-top: 16px; }
