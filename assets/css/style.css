@@ -650,3 +650,4 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 @media (min-width: 768px) { .sec-case .case-extra { max-width: 900px; margin-left: auto; margin-right: auto; } }
 .sched-note { display: flex; gap: 8px; align-items: flex-start; margin-top: 12px; background: #fff4e8; border-radius: var(--radius-sm); padding: 10px 12px; font-weight: 700; font-size: 14.5px; color: var(--navy-deep); }
 .sched-note .ico { color: var(--orange); margin-top: .25em; flex: none; }
+.map-link { display: inline-flex; margin-top: 10px; }
