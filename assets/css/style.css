@@ -703,3 +703,9 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .reason-list h3 { font-size: 18px; color: var(--navy-deep); margin-bottom: 8px; line-height: 1.45; }
 .reason-list p { font-size: 15px; line-height: 1.8; }
 .curr-motto { text-align: center; font-family: var(--font-round); font-weight: 700; font-size: clamp(20px, 3.4vw, 28px); color: var(--navy-deep); line-height: 1.6; margin-bottom: 18px; }
+
+/* 11/14 本人：PCでは最初の動画が画面いっぱいで見づらい → 少し小さく、角を丸めた枠に収める（スクロールすると今までどおり背景に広がる） */
+@media (min-width: 900px) {
+  .hq-stage { display: flex; align-items: center; justify-content: center; }
+  .hq-stage video { width: min(82vw, calc((100svh - var(--stage-top, 90px) - 14vh) * 16 / 9)); height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
+}

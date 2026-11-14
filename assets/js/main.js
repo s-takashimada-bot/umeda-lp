@@ -84,6 +84,9 @@
       var w = stage.clientWidth, h = stage.clientHeight, vw = hv.videoWidth || 16, vh = hv.videoHeight || 9;
       var s = Math.min(w / vw, h / vh);
       cover = Math.max(w / (vw * s), h / (vh * s));
+      // PCでは動画を小さな枠に収めているので、その枠から画面いっぱいまでの倍率にする（11/14）
+      var ew = hv.clientWidth, eh = hv.clientHeight;
+      if (ew && eh && (ew < w - 2 || eh < h - 2)) cover = Math.max(w / ew, h / eh);
     };
     var setTop = function () {
       // ヘッダーは上に貼りつくので、貼りついたときの下端（top＋高さ）に動画の枠を合わせる
