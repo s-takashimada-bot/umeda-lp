@@ -717,3 +717,7 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .cmp-table td:not(.ours) { background: #fafbfc; }
 .cmp-table td:not(.ours)::before { content: "×"; color: #a5adbd; font-weight: 700; margin-right: 6px; }
 @media (max-width: 600px) { .cmp-table tbody th { white-space: normal; width: 22%; font-size: 13px; padding-left: 10px; padding-right: 8px; } .cmp-table th, .cmp-table td { padding: 12px 8px; } }
+
+/* 11/14 本人：本部講師の経歴を札で（門脇さん・入江さん） */
+.team-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 10px 0 12px; }
+.team-tags li { font-size: 12.5px; font-weight: 700; color: var(--navy); background: var(--navy-soft); border: 1px solid #cdd8ee; padding: 3px 10px; border-radius: 999px; }
