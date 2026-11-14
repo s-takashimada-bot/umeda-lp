@@ -721,3 +721,12 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 /* 11/14 本人：本部講師の経歴を札で（門脇さん・入江さん） */
 .team-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 10px 0 12px; }
 .team-tags li { font-size: 12.5px; font-weight: 700; color: var(--navy); background: var(--navy-soft); border: 1px solid #cdd8ee; padding: 3px 10px; border-radius: 999px; }
+
+/* 11/15 法人プラン：個人向け講座との違い（×をつけない）・助成金の目安表・流れ6手順 */
+.cmp-neutral td:not(.ours)::before { content: none; }
+.cmp-neutral td:not(.ours) { color: #5b6478; }
+@media (min-width: 768px) { .steps-6 { grid-template-columns: repeat(3, 1fr); } }
+.subsidy-table { max-width: 560px; margin: 8px auto 22px; }
+.subsidy-table td { text-align: right; font-weight: 700; }
+.subsidy-table td small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; text-align: right; margin-top: 4px; }
+.subsidy-table tr:last-child th, .subsidy-table tr:last-child td { background: #fff8ef; border-top: 2px solid var(--orange); }
