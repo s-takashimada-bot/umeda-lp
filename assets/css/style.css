@@ -730,3 +730,4 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .subsidy-table td { text-align: right; font-weight: 700; }
 .subsidy-table td small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; text-align: right; margin-top: 4px; }
 .subsidy-table tr:last-child th, .subsidy-table tr:last-child td { background: #fff8ef; border-top: 2px solid var(--orange); }
+@media (min-width: 768px) { .steps-7 { grid-template-columns: repeat(4, 1fr); } }
