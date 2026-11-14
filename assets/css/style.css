@@ -603,7 +603,7 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .team-card h3 { font-size: 18px; color: var(--navy-deep); margin: 2px 0; }
 .team-org { font-size: 12.5px; color: var(--muted); margin-bottom: 8px; }
 .team-card p:last-child { font-size: 14px; text-align: left; line-height: 1.75; }
-.team-local { background: var(--navy-soft); }
+.team-local { background: #fff; } /* 11/14 本人：本部の2人と枠の色をそろえる */
 
 /* 料金・受講条件：本部LPと同じ「項目｜受講条件」の2列・中央ぞろえ。受講条件の列をオレンジの枠で囲む */
 .cond-wrap { max-width: 900px; margin: 0 auto; background: #fff; box-shadow: var(--shadow); }
