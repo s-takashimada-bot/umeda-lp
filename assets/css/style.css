@@ -709,3 +709,11 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
   .hq-stage { display: flex; align-items: center; justify-content: center; }
   .hq-stage video { width: min(82vw, calc((100svh - var(--stage-top, 90px) - 14vh) * 16 / 9)); height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
 }
+
+/* 11/14 本人：比べる表の「項目」と「動画学習で起こり得る悩み」を見分けやすく */
+.cmp-table tbody th { background: var(--navy-soft); font-weight: 800; width: 1%; border-right: 1px solid #d5deee; }
+.cmp-table thead th:first-child { background: var(--navy-soft); border-right: 1px solid #d5deee; }
+.cmp-table thead th:nth-child(2) { background: #f1f3f7; color: #5b6478; }
+.cmp-table td:not(.ours) { background: #fafbfc; }
+.cmp-table td:not(.ours)::before { content: "×"; color: #a5adbd; font-weight: 700; margin-right: 6px; }
+@media (max-width: 600px) { .cmp-table tbody th { white-space: normal; width: 22%; font-size: 13px; padding-left: 10px; padding-right: 8px; } .cmp-table th, .cmp-table td { padding: 12px 8px; } }
