@@ -783,3 +783,18 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .make-card:has(.make-effect) { display: flex; flex-direction: column; }
 .make-card .make-effect { margin-top: auto; }
 .make-card:has(.make-effect) > p:not(.make-effect) { margin-bottom: 12px; }
+
+/* 11/15 本人：会社員・副業ページの比べる表（対面授業の価値）の列の幅をそろえて見やすく */
+.page-office .cmp-table { table-layout: fixed; }
+.page-office #compare .container.narrow { max-width: 980px; }
+.page-office .cmp-table thead th:first-child { width: 16%; }
+.page-office .cmp-table thead th:nth-child(2) { width: 40%; }
+.page-office .cmp-table thead th.ours { width: 44%; }
+.page-office .cmp-table tbody th { width: auto; }
+.page-office .cmp-table th, .page-office .cmp-table td { padding: 16px 16px; vertical-align: middle; }
+@media (max-width: 600px) {
+  .page-office .cmp-table thead th:first-child { width: 22%; }
+  .page-office .cmp-table thead th:nth-child(2) { width: 33%; }
+  .page-office .cmp-table thead th.ours { width: 45%; }
+  .page-office .cmp-table th, .page-office .cmp-table td { padding: 12px 8px; }
+}
