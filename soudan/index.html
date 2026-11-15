@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>個別無料相談会のご予約｜MIRAI CAMP® 大阪梅田校</title>
+<meta name="description" content="自分にもできる？何を作れる？受講を迷っている方のための、オンライン30分の個別無料相談会です。">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../">
+      <img src="img/logo.png" alt="" width="40" height="40">
+      <span class="brand-text"><span class="brand-name">MIRAI CAMP<sup>®</sup></span><span class="brand-school">大阪梅田校</span></span>
+    </a>
+    <a class="btn btn-orange btn-sm" href="#pick">日時を選ぶ</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 予約する（ふだんの画面） -->
+  <div data-view="book">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-badge"><span>参加無料</span>受講を迷っている方へ</p>
+          <h1><span class="hero-q">自分にもできる？<br>何を作れる？</span><span class="hero-a">30分で、一緒に<br class="sp-only">確かめましょう。</span></h1>
+          <ul class="hero-pills">
+            <li>オンライン<small>Google Meet</small></li>
+            <li>30分<small>参加無料</small></li>
+            <li>カメラ<small>オフでOK</small></li>
+          </ul>
+          <a class="btn btn-orange btn-lg" href="#pick">空いている日時を見る</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="meet">
+            <div class="meet-bar"><i></i><i></i><i></i><span>個別無料相談会</span></div>
+            <div class="meet-screen">
+              <img src="img/rep.jpg" alt="" width="240" height="240">
+              <p class="meet-name">大阪梅田校 校舎長</p>
+              <p class="bubble b1">どんなお仕事を<br>されていますか？</p>
+              <p class="bubble b2">その作業、<br>AIで楽にできますよ</p>
+            </div>
+            <div class="meet-ctrl"><i></i><i></i><i class="red"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="container narrow">
+        <h2 class="sec-title">こんな方のための相談会です</h2>
+        <ul class="checks">
+          <li>パソコンが得意ではないけれど、<b>自分にもできるか</b>知りたい</li>
+          <li>AIで<b>何を作ればいいか</b>、まだ決まっていない</li>
+          <li>15万円をかける価値があるか、<b>受講する前に確かめたい</b></li>
+          <li>日程や持ち物など、<b>細かいことを聞いてから</b>決めたい</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec sec-alt">
+      <div class="container narrow">
+        <h2 class="sec-title">30分でやること</h2>
+        <ol class="steps">
+          <li><span class="step-no">1</span><div><h3>AIで楽にできることを洗い出す</h3><p>お仕事や日々のことを伺いながら、AIで楽にできそうなことを一緒に見つけます。</p></div></li>
+          <li><span class="step-no">2</span><div><h3>似た立場の受講生の例を見る</h3><p>本部の講座の受講生が、2日間で作ったものをお見せします。</p></div></li>
+          <li><span class="step-no">3</span><div><h3>気になることに答える</h3><p>「ついていけるか」「何を準備すればいいか」など、何でも聞いてください。</p></div></li>
+        </ol>
+        <p class="note-box">講座のご案内は、<b>聞きたい方にだけ</b>お伝えします。相談だけでも大丈夫です。</p>
+        <div class="host">
+          <img src="img/rep.jpg" alt="大阪梅田校の校舎長（イラスト）" width="72" height="72">
+          <p><b>担当：大阪梅田校 校舎長</b><br>ひとりずつ、30分じっくりお話を伺います。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="pick">
+      <div class="container narrow">
+        <h2 class="sec-title">日時を選ぶ</h2>
+        <p class="sec-lead">土日祝 10:00〜18:00、平日 20:00〜21:00 のうち、空いている時間です。<br>受付は前日の18:00まで。</p>
+        <div class="picker" data-picker>
+          <p class="loading" data-loading>空いている日時を読み込んでいます…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-alt" id="form" hidden data-form-sec>
+      <div class="container narrow">
+        <h2 class="sec-title">お名前などを入力</h2>
+        <p class="chosen" data-chosen></p>
+        <form class="form" data-form novalidate>
+          <label class="field"><span>お名前<em>必須</em></span><input name="name" autocomplete="name" required maxlength="60" placeholder="例：梅田 花子"></label>
+          <label class="field"><span>メールアドレス<em>必須</em></span><input name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" placeholder="例：hanako@example.com"><small>Google Meetのリンクをお送りします</small></label>
+          <fieldset class="field">
+            <legend>あてはまるもの<em>必須</em></legend>
+            <div class="chips" data-choices="segments" data-name="segment"></div>
+          </fieldset>
+          <details class="optional">
+            <summary>ほかの項目（任意）を入力する</summary>
+            <label class="field"><span>電話番号<i>任意</i></span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="例：090-1234-5678"><small>当日つながらないときのご連絡用です</small></label>
+            <label class="field"><span>会社名・お店の名前<i>任意</i></span><input name="company" autocomplete="organization" maxlength="80"><small>分かると、お仕事に合った例をご用意できます</small></label>
+            <fieldset class="field"><legend>AIを使ったこと<i>任意</i></legend><div class="chips" data-choices="aiLevels" data-name="ai"></div></fieldset>
+            <label class="field"><span>相談したいこと<i>任意</i></span><textarea name="message" rows="4" maxlength="1000" placeholder="例：お店の予約管理を楽にしたい／何を作ればいいか分からない"></textarea></label>
+            <fieldset class="field"><legend>何で知りましたか<i>任意</i></legend><div class="chips" data-choices="sources" data-name="source"></div></fieldset>
+          </details>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="agree">ご入力いただいた内容は、相談会のご連絡と準備にだけ使います。<a href="../privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></p>
+          <p class="error" data-error role="alert" hidden></p>
+          <button class="btn btn-orange btn-lg btn-block" type="submit" data-submit>この内容で予約する</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="container narrow">
+        <h2 class="sec-title">よくある質問</h2>
+        <dl class="faq">
+          <dt>本当に無料ですか？</dt><dd>はい、無料です。相談したあとに受講しなくても、費用は一切かかりません。</dd>
+          <dt>しつこく勧められませんか？</dt><dd>講座のご案内は、聞きたい方にだけお伝えします。相談だけで終わっても大丈夫です。</dd>
+          <dt>スマホでも参加できますか？</dt><dd>はい。Google Meetのアプリを入れておくとスムーズです。カメラはオフでも構いません。</dd>
+          <dt>日時を変えたくなったら？</dt><dd>予約後にお送りするメールのリンクから、ご自身で変更・キャンセルできます（変更は前日18:00まで）。</dd>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+  <!-- 予約できた -->
+  <section class="sec done" data-view="done" hidden>
+    <div class="container narrow">
+      <p class="done-mark" aria-hidden="true">✓</p>
+      <h1 class="sec-title">ご予約を承りました</h1>
+      <div class="ticket" data-ticket></div>
+      <p class="sec-lead">確認のメールをお送りしました。当日は、メールにあるGoogle Meetのリンクからご参加ください。<br>メールが届かないときは、迷惑メールのフォルダもご確認ください。</p>
+      <p class="center"><a class="btn btn-ghost btn-md" href="../">大阪梅田校のトップへ</a></p>
+    </div>
+  </section>
+
+  <!-- 変更・キャンセル（メールのリンクから） -->
+  <section class="sec" data-view="manage" hidden>
+    <div class="container narrow">
+      <h1 class="sec-title">ご予約の変更・キャンセル</h1>
+      <div data-manage><p class="loading">ご予約を読み込んでいます…</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-name">MIRAI CAMP<sup>®</sup> 大阪梅田校</p>
+    <p>運営：株式会社GHD</p>
+    <p class="footer-links"><a href="../">トップ</a><a href="../tokushoho/">特定商取引法に基づく表記</a><a href="../privacy/">プライバシーポリシー</a></p>
+  </div>
+</footer>
+
+<div class="sticky-cta" data-sticky><a class="btn btn-orange btn-md btn-block" href="#pick">空いている日時を見る（無料・30分）</a></div>
+
+<script src="app.js"></script>
+</body>
+</html>

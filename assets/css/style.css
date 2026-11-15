@@ -731,3 +731,8 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .subsidy-table td small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; text-align: right; margin-top: 4px; }
 .subsidy-table tr:last-child th, .subsidy-table tr:last-child td { background: #fff8ef; border-top: 2px solid var(--orange); }
 @media (min-width: 768px) { .steps-7 { grid-template-columns: repeat(4, 1fr); } }
+
+/* 11/15 相談窓口（個別無料相談会への小さいリンク・A案） */
+.soudan-link { margin-top: 22px; padding-top: 16px; border-top: 1px dashed var(--border); font-size: 14px; color: var(--muted); }
+.soudan-link a { color: var(--navy); font-weight: 700; text-decoration: underline; white-space: nowrap; }
+.soudan-link .fine { margin-top: 4px; font-size: 12px; }
