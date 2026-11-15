@@ -736,3 +736,44 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .soudan-link { margin-top: 22px; padding-top: 16px; border-top: 1px dashed var(--border); font-size: 14px; color: var(--muted); }
 .soudan-link a { color: var(--navy); font-weight: 700; text-decoration: underline; white-space: nowrap; }
 .soudan-link .fine { margin-top: 4px; font-size: 12px; }
+
+/* 11/15 本人：法人ページの表のバランス（個人向け講座との違い・研修の価値・助成金の目安・料金） */
+.page-corporate .cmp-table { table-layout: fixed; }
+.page-corporate .cmp-table thead th:first-child { width: 18%; }
+.page-corporate .cmp-table thead th:nth-child(2) { width: 39%; }
+.page-corporate .cmp-table thead th.ours { width: 43%; }
+.page-corporate .cmp-table tbody th { width: auto; }
+.page-corporate .cmp-table th, .page-corporate .cmp-table td { padding: 16px 16px; vertical-align: middle; }
+@media (max-width: 600px) {
+  .page-corporate .cmp-table thead th:first-child { width: 23%; }
+  .page-corporate .cmp-table thead th:nth-child(2) { width: 35%; }
+  .page-corporate .cmp-table thead th.ours { width: 42%; }
+  .page-corporate .cmp-table th, .page-corporate .cmp-table td { padding: 12px 8px; }
+}
+.subsidy-table { max-width: 480px; }
+.subsidy-table th { width: auto; white-space: nowrap; }
+.subsidy-table td { width: 1%; white-space: nowrap; padding-left: 28px; }
+.subsidy-note { text-align: center; margin: -12px auto 22px; }
+@media (max-width: 600px) { .subsidy-table th, .subsidy-table td { display: table-cell; } .subsidy-table th { white-space: normal; padding-bottom: 14px; } .subsidy-table td { padding-top: 14px; padding-left: 12px; } }
+.cond-subsidy { display: inline-block; margin: 8px 0 2px; padding: 6px 18px; border-radius: 999px; background: #fff3e2; border: 2px solid var(--orange); color: var(--navy-deep); font-weight: 800; font-size: 15px; }
+.cond-subsidy b { color: #e0670b; font-size: 22px; font-weight: 900; margin: 0 4px 0 8px; }
+@media (max-width: 600px) { .cond-subsidy { font-size: 13px; padding: 5px 12px; } .cond-subsidy b { font-size: 18px; } }
+.page-corporate #plan .container.narrow, .page-corporate #compare .container.narrow { max-width: 980px; }
+.page-corporate .cmp-table thead th:first-child { width: 16%; }
+.page-corporate .cmp-table thead th:nth-child(2) { width: 37%; }
+.page-corporate .cmp-table thead th.ours { width: 47%; }
+@media (max-width: 600px) {
+  .page-corporate .cmp-table thead th:first-child { width: 23%; }
+  .page-corporate .cmp-table thead th:nth-child(2) { width: 35%; }
+  .page-corporate .cmp-table thead th.ours { width: 42%; }
+}
+.cond-subsidy { display: table; margin: 10px auto 4px; }
+@media (max-width: 600px) {
+  .page-corporate .cmp-table thead th:first-child { width: 22%; }
+  .page-corporate .cmp-table thead th:nth-child(2) { width: 30%; }
+  .page-corporate .cmp-table thead th.ours { width: 48%; }
+}
+.cond-subsidy { border-radius: 14px; }
+.cond-subsidy i { font-style: normal; }
+.cond-subsidy b { white-space: nowrap; }
+@media (max-width: 600px) { .cond-subsidy i { display: block; font-size: 12px; } .cond-subsidy b { margin-left: 0; } }
