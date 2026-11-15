@@ -777,3 +777,9 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
 .cond-subsidy i { font-style: normal; }
 .cond-subsidy b { white-space: nowrap; }
 @media (max-width: 600px) { .cond-subsidy i { display: block; font-size: 12px; } .cond-subsidy b { margin-left: 0; } }
+/* 11/15 法人ページ：作れるものに「変わること」の一言 */
+.make-card .make-effect { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #f3c48a; color: #d0600a; font-weight: 800; font-size: 14.5px; line-height: 1.6; }
+.make-card .make-effect::before { content: "→ "; }
+.make-card:has(.make-effect) { display: flex; flex-direction: column; }
+.make-card .make-effect { margin-top: auto; }
+.make-card:has(.make-effect) > p:not(.make-effect) { margin-bottom: 12px; }
