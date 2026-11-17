@@ -798,3 +798,13 @@ sup { font-size: .55em; vertical-align: super; line-height: 0; }
   .page-office .cmp-table thead th.ours { width: 45%; }
   .page-office .cmp-table th, .page-office .cmp-table td { padding: 12px 8px; }
 }
+
+/* 11/18 本人：無料プレゼントは2つ（チェックリスト＝このページで／AI開発全体マップ＝LINE登録で） */
+.gift-pair { display: grid; gap: 18px; max-width: 980px; margin: 0 auto; }
+@media (min-width: 860px) { .gift-pair { grid-template-columns: 1fr 1fr; align-items: stretch; } }
+.gift-pair .gift-card { display: flex; flex-direction: column; align-items: center; }
+.gift-pair .gift-card .fine { margin-top: auto; padding-top: 10px; }
+.gift-tag { display: inline-block; font-size: 13px; font-weight: 800; color: #fff; background: var(--orange); border-radius: 999px; padding: 4px 14px; margin: 0 0 6px; }
+.gift-card-line { border-color: #06c755; background: linear-gradient(160deg, #effbf3, #fff); }
+.gift-card-line .gift-tag { background: #06c755; }
+.line-gift-note { font-weight: 700; color: #058a3d; }
